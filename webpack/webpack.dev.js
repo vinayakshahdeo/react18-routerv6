@@ -6,6 +6,7 @@ module.exports = {
 	devServer: {
 		hot: true,
 		open: true,
+		port: 3000,
 		proxy: {
 			//set api pointing to server
 			'/api': {
