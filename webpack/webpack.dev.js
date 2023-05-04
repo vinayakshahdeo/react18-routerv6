@@ -6,6 +6,14 @@ module.exports = {
 	devServer: {
 		hot: true,
 		open: true,
+		proxy: {
+			//set api pointing to server
+			'/api': {
+				target: 'http://localhost:3000',
+				router: () => 'http://localhost:4000',
+				logLevel: 'debug' /*optional*/,
+			},
+		},
 	},
 	plugins: [
 		new webpack.DefinePlugin({
